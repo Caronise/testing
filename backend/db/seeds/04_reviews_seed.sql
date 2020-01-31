@@ -10,10 +10,10 @@ VALUES (
 
 INSERT INTO reviews (user_id, book_id, review_description, rating)
 VALUES (
-'1',
-'1',
-'Negative Description book #1',
-'1'
+  '1',
+  '1',
+  'Negative Description book #1',
+  '1'
 ):
 
 INSERT INTO reviews (user_id, book_id, review_description, rating)
@@ -26,10 +26,10 @@ VALUES (
 
 INSERT INTO reviews (user_id, book_id, review_description, rating)
 VALUES (
-'1',
-'1',
-'Negative Description book #2',
-'1'
+  '1',
+  '2',
+  'Negative Description book #2',
+  '1'
 ):
 
 INSERT INTO reviews (user_id, book_id, review_description, rating)
@@ -42,10 +42,10 @@ VALUES (
 
 INSERT INTO reviews (user_id, book_id, review_description, rating)
 VALUES (
-'1',
-'1',
-'Negative Description book #3',
-'1'
+  '1',
+  '3',
+  'Negative Description book #3',
+  '1'
 ):
 
 INSERT INTO reviews (user_id, book_id, review_description, rating)
@@ -58,10 +58,10 @@ VALUES (
 
 INSERT INTO reviews (user_id, book_id, review_description, rating)
 VALUES (
-'1',
-'1',
-'Negative Description book #4',
-'2'
+  '1',
+  '4',
+  'Negative Description book #4',
+  '2'
 ):
 
 INSERT INTO reviews (user_id, book_id, review_description, rating)
@@ -74,8 +74,8 @@ VALUES (
 
 INSERT INTO reviews (user_id, book_id, review_description, rating)
 VALUES (
-'1',
-'1',
-'Negative Description book #5',
-'3'
+  '1',
+  '5',
+  'Negative Description book #5',
+  '3'
 ):
