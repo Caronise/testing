@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET wishlists listing */
-router.get('/wishlists', (req, res) => {
+/* GET reviews listing. */
+router.get('/reviews', (req, res) => {
   const query = {
     text: `
-    SELECT * FROM wishlists
+    SELECT * FROM reviews
     ;`
   }
   db.query(query)
@@ -15,11 +15,11 @@ router.get('/wishlists', (req, res) => {
     .catch(err => console.log(`Error getting data: ${err.message}`))
 })
 
-/* GET wishlists by id */
-router.get('/wishlists/:id', (req, res) => {
+/* GET review by id */
+router.get('/reviews/:id', (req, res) => {
   const query = {
     text: `
-    SELECT * FROM wishlists
+    SELECT * FROM reviews
     WHERE id = $1
     ;`,
     values: [req.params.id]
@@ -31,11 +31,11 @@ router.get('/wishlists/:id', (req, res) => {
     .catch(err => console.log(`Error getting data: ${err.message}`))
 })
 
-/* POST new wishlists */
-router.post('/wishlists', (req, res) => {
+/* POST review */
+router.post('/reviews', (req, res) => {
   const query = {
     text: `
-    INSERT INTO wishlists ()
+    INSERT INTO reviews ()
     VALUES ()
     RETURNING *
     ;`,
@@ -48,8 +48,8 @@ router.post('/wishlists', (req, res) => {
     .catch(err => console.log(`Error getting data: ${err.message}`))
 })
 
-/* PUT wishlist */
-router.put('/wishlists/:id', (req, res) => {
+/* PUT review */
+router.put('/reviews/:id', (req, res) => {
   const query = {
     text: `
     UPDATE reviews
@@ -65,11 +65,12 @@ router.put('/wishlists/:id', (req, res) => {
     .catch(err => console.log(`Error getting data: ${err.message}`))
 })
 
-/* DELETE wishlist */
-router.delete('/wishlists/:id', (req, res) => {
+
+/* DELETE review */
+router.delete('/reviews/:id', (req, res) => {
   const query = {
     text: `
-    DELETE $1 FROM wishlists
+    DELETE $1 FROM reviews
     WHERE id = $1
     ;`,
     values: [req.params.id]
@@ -80,6 +81,5 @@ router.delete('/wishlists/:id', (req, res) => {
     })
     .catch(err => console.log(`Error getting data: ${err.message}`))
 })
-
 
 module.exports = router;
